@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to bottom right, #A66D25, #255DA6);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+img {
+    width: 100%;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+.navbar {
+    background-image: linear-gradient(to bottom right, #1E49E1, rgb(155, 155, 155));
+}
+
+.navbar span {
+    display: block;
+    color: white;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.card {
+    background-image: linear-gradient(to bottom right, #2E76D1, #D1892E);
+    color: white;
+}
+
+.card .card-body .md-3 {
+    background-color: #1E49E1;
+}

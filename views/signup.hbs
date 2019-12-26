@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/eec08acf53.js" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <title>Auto Log</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/users/Login"><b>AUTO LOG</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/users/signup">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="/users/Login">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <h2>Welcome to Auto Log.</h2>
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">A place where you can post pictures of your cars <br> or your friends
+                            cars <br> see what others are posting <br> and create new events that everyone can see and
+                            attend.</h4>
+                    </div>
+                </div>
+                <div class="card text-white mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Create a new account</h5>
+                        <p class="card-text">
+                            <form class="form-signin" method="post" action="/users/signup">
+                                <div class="form-group">
+                                    <label for="username">New User Name</label>
+                                    <input class="form-control" type="text" name="username" placeholder="User name"
+                                        required autofocus>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">New Password</label>
+                                    <input class="form-control" type="password" name="password" placeholder="Password"
+                                        required>
+                                </div>
+                                <div class="form-group form-check">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Sign Up</button>
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

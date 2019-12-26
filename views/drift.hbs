@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/eec08acf53.js" crossorigin="anonymous"></script>
+  <link rel='stylesheet' href='/stylesheets/events.css' />
+
+</head>
+
+<body>
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="/users/home"><b>AUTO LOG</b></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/users/profile">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/uploadpic">Upload</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/createEvent">Create Event</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
+        <table id="myTable">
+          <thead>
+            <tr>
+              <th>User</th>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each rows}}
+            <tr>
+              <td> {{ username }} </td>
+              <td> {{ event }}</td>
+              <td> {{ date }}</td>
+              <td> {{ description }}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+
+        <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" charset="utf8"
+          src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+        <script>
+          $(document).ready(function () {
+            $('#myTable').DataTable();
+          });
+        </script>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

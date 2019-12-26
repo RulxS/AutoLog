@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/1e19e68466.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+    <title>Auto Log</title>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="/users/home"><b>AUTO LOG</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/users/profile">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/uploadpic">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/createEvent">Create Event</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/logout"><i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg">
+                <div class="card text-white mb-3">
+                    <div class="card-header">
+                        <h1>Welcome to your profile, {{person.username}}! </h1>
+                        {{#if user}}
+                        <p>Welcome, <strong>{{user.username}}</strong> !</p>
+                        {{/if}}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Change Password</h5>
+                        <p class="card-text">
+                            <form method="post" action="/users/profile">
+                                <div style="float:left; width: 250px;">Current password</div><input type="password"
+                                    name="current" placeholder="Current Password"><br>
+                                <div style="float:left; width: 250px;">New Password</div><input type="password"
+                                    name="new1" id="new1" placeholder="Password"><br>
+                                <div style="float:left; width: 250px;">Confirm Password</div><input type="password"
+                                    name="new2" id="new2" placeholder="Password confirmation"><br>
+                                <br>
+                                <div style="float:left; width: 250px;">&nbsp;</div><input type="submit"
+                                    value="Change Password">
+                            </form>
+                            {{#if pass}}
+                            <h3 style="color:red;">Your current password is not correct</h3>
+                            {{/if}}
+
+                            {{#if newpass}}
+                            <h3 style="color:red;">Passwords do not match</h3>
+                            {{/if}}
+
+                            {{#if success}}
+                            <h3 style="color:red;">Password changed successfully</h3>
+                            {{/if}}
+                        </p>
+                    </div>
+                </div>
+                {{#if user}}
+                <p>Welcome, <strong>{{user.username}}</strong> !</p>
+                {{/if}}
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
